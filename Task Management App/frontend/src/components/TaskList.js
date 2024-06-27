@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import axios from "axios"
-import "../styles/App.css" // Make sure to style your component
+import "../styles/App.css"
 
 const TaskList = () => {
   const [tasks, setTasks] = useState([])
@@ -8,7 +8,7 @@ const TaskList = () => {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const response = await axios.get("/api/tasks")
+        const response = await axios.get("http://localhost:5000/api/tasks")
         setTasks(response.data)
       } catch (error) {
         console.error("Error fetching tasks", error)
@@ -18,18 +18,26 @@ const TaskList = () => {
     fetchTasks()
   }, [])
 
-  if (!tasks.length) {
-    return <div>No tasks available</div>
-  }
-
   return (
     <div className="task-list">
-      {tasks.map((task) => (
-        <div key={task._id} className="task-item">
-          <h3>{task.title}</h3>
-          <p>{task.description}</p>
-        </div>
-      ))}
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {tasks.map((task) => (
+            <tr key={task._id}>
+              <td>{task.title}</td>
+              <td>{task.description}</td>
+              <td>{task.status}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   )
 }

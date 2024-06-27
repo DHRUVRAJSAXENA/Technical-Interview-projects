@@ -43,13 +43,13 @@ textarea:focus {
   border-color: #007bff;
 }
 
-ul {
+/* ul {
   list-style-type: none;
   padding: 0;
-}
+} */
 
-li {
-  background-color: #fff;
+/* li {
+  color: #d52424;
   margin: 10px 0;
   padding: 15px;
   border-radius: 5px;
@@ -57,9 +57,10 @@ li {
 }
 
 li h3 {
+  color: black;
   margin: 0 0 10px;
 }
 
 li p {
-  color: #555;
-}
+  color: #ca2525;
+} */

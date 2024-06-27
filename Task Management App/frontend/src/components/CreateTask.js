@@ -9,8 +9,11 @@ const CreateTask = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      const response = await axios.post("/tasks", { title, description })
+      const response = await axios.post("/", { title, description })
       console.log("Task created:", response.data)
+      // Optionally, you can clear the form fields after successful submission
+      setTitle("")
+      setDescription("")
     } catch (error) {
       console.error("Error creating task:", error)
     }

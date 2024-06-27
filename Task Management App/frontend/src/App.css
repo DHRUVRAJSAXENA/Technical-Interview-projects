@@ -89,33 +89,26 @@ textarea:focus {
 }
 
 .task-list {
-  list-style: none;
-  padding: 0;
+  color: black;
 }
 
-.task-list li {
-  background-color: #1f4068;
-  margin: 10px 0;
-  padding: 15px;
-  border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: background-color 0.3s ease;
+.task-list table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
 }
 
-.task-list li:hover {
-  background-color: #16213e;
+.task-list th,
+.task-list td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
 }
 
-.task-list li button {
-  background-color: transparent;
-  color: #e94560;
-  border: none;
-  cursor: pointer;
-  transition: color 0.3s ease;
+.task-list th {
+  background-color: #f2f2f2;
 }
 
-.task-list li button:hover {
-  color: #d72d46;
+.task-list tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
