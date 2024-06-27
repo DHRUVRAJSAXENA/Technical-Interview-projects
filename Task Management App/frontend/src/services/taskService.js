@@ -9,3 +9,11 @@ export const getTasks = async () => {
 export const createTask = async (task) => {
   return await axios.post(API_URL, task)
 }
+
+export const updateTask = async (taskId, task) => {
+  return await axios.put(API_URL + taskId, task)
+}
+
+export const deleteTask = async (taskId) => {
+  return await axios.delete(API_URL + taskId)
+}

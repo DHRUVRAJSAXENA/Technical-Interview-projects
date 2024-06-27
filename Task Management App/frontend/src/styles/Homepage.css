@@ -1,0 +1,29 @@
+/* HomePage.css */
+
+.home-page {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.home-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.home-page p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.task-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: 30px;
+}

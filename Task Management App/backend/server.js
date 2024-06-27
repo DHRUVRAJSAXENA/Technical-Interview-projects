@@ -1,12 +1,14 @@
 import express from "express"
 import mongoose from "mongoose"
 import dotenv from "dotenv"
+import cors from "cors" // Import cors
 import taskRoutes from "./routes/taskRoutes.js"
 
 dotenv.config()
 
 const app = express()
 
+app.use(cors()) // Use cors middleware
 app.use(express.json())
 
 app.use("/api/tasks", taskRoutes)

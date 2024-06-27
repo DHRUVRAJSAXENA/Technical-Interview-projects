@@ -1,10 +1,17 @@
-import "./App.css"
+import React from "react"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import HomePage from "./components/HomePage"
+import "./App.css" // Make sure to create this CSS file for styling
 
-function App() {
+const App = () => {
   return (
-    <>
-      <h1>Hello from fronted</h1>
-    </>
+    <Router>
+      <div className="app">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+      </div>
+    </Router>
   )
 }
 
